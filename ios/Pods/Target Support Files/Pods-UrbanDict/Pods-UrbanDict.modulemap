@@ -1,0 +1,6 @@
+framework module Pods_UrbanDict {
+  umbrella header "Pods-UrbanDict-umbrella.h"
+
+  export *
+  module * { export * }
+}

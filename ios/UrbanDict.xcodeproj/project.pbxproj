@@ -17,6 +17,7 @@
 		4CD25DFC207DACF800557EF3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD25DFB207DACF800557EF3 /* main.m */; };
 		4CD25E05207DEB7D00557EF3 /* BaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD25E04207DEB7D00557EF3 /* BaseRequest.m */; };
 		4CD25E08207DEBB100557EF3 /* ServerResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD25E07207DEBB100557EF3 /* ServerResponse.m */; };
+		8FAEEB976C94931F582DD07F /* Pods_UrbanDict.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BFD31BAFD5B18964324906 /* Pods_UrbanDict.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,9 @@
 		4CD25E04207DEB7D00557EF3 /* BaseRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseRequest.m; sourceTree = "<group>"; };
 		4CD25E06207DEBB100557EF3 /* ServerResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerResponse.h; sourceTree = "<group>"; };
 		4CD25E07207DEBB100557EF3 /* ServerResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServerResponse.m; sourceTree = "<group>"; };
+		5E7B725D46057EFD636F88D1 /* Pods-UrbanDict.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UrbanDict.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UrbanDict/Pods-UrbanDict.debug.xcconfig"; sourceTree = "<group>"; };
+		7AFF673242DE40051576AA65 /* Pods-UrbanDict.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UrbanDict.release.xcconfig"; path = "Pods/Target Support Files/Pods-UrbanDict/Pods-UrbanDict.release.xcconfig"; sourceTree = "<group>"; };
+		84BFD31BAFD5B18964324906 /* Pods_UrbanDict.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UrbanDict.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FAEEB976C94931F582DD07F /* Pods_UrbanDict.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +63,8 @@
 			children = (
 				4CD25DE8207DACF600557EF3 /* UrbanDict */,
 				4CD25DE7207DACF600557EF3 /* Products */,
+				7E62B61FCC2FD49B58952295 /* Pods */,
+				AE2E43E563B837C7A9400009 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +102,23 @@
 			path = UrbanDict;
 			sourceTree = "<group>";
 		};
+		7E62B61FCC2FD49B58952295 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5E7B725D46057EFD636F88D1 /* Pods-UrbanDict.debug.xcconfig */,
+				7AFF673242DE40051576AA65 /* Pods-UrbanDict.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AE2E43E563B837C7A9400009 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84BFD31BAFD5B18964324906 /* Pods_UrbanDict.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -102,9 +126,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4CD25DFF207DACF800557EF3 /* Build configuration list for PBXNativeTarget "UrbanDict" */;
 			buildPhases = (
+				0E3993E413414F52A10BADBF /* [CP] Check Pods Manifest.lock */,
 				4CD25DE2207DACF600557EF3 /* Sources */,
 				4CD25DE3207DACF600557EF3 /* Frameworks */,
 				4CD25DE4207DACF600557EF3 /* Resources */,
+				99ADA6C324A73CEF7A0E1DF6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -159,6 +185,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0E3993E413414F52A10BADBF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UrbanDict-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99ADA6C324A73CEF7A0E1DF6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-UrbanDict/Pods-UrbanDict-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DoubleConversion/DoubleConversion.framework",
+				"${BUILT_PRODUCTS_DIR}/Folly/folly.framework",
+				"${BUILT_PRODUCTS_DIR}/React/React.framework",
+				"${BUILT_PRODUCTS_DIR}/glog/glog.framework",
+				"${BUILT_PRODUCTS_DIR}/yoga/yoga.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DoubleConversion.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/folly.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/glog.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UrbanDict/Pods-UrbanDict-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4CD25DE2207DACF600557EF3 /* Sources */ = {
@@ -309,15 +382,13 @@
 		};
 		4CD25E00207DACF800557EF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E7B725D46057EFD636F88D1 /* Pods-UrbanDict.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 86UUNEZV42;
 				INFOPLIST_FILE = UrbanDict/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MichaelOpenSourceFactory.UrbanDict;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -326,15 +397,13 @@
 		};
 		4CD25E01207DACF800557EF3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AFF673242DE40051576AA65 /* Pods-UrbanDict.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 86UUNEZV42;
 				INFOPLIST_FILE = UrbanDict/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MichaelOpenSourceFactory.UrbanDict;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
