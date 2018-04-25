@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C315759208445E500B913AC /* APIBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C315758208445E500B913AC /* APIBaseManager.m */; };
 		4CD25DEB207DACF700557EF3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD25DEA207DACF700557EF3 /* AppDelegate.m */; };
 		4CD25DEE207DACF700557EF3 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD25DED207DACF700557EF3 /* FirstViewController.m */; };
 		4CD25DF1207DACF700557EF3 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD25DF0207DACF700557EF3 /* SecondViewController.m */; };
@@ -14,9 +15,15 @@
 		4CD25DF6207DACF800557EF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CD25DF5207DACF800557EF3 /* Assets.xcassets */; };
 		4CD25DF9207DACF800557EF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD25DF7207DACF800557EF3 /* LaunchScreen.storyboard */; };
 		4CD25DFC207DACF800557EF3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD25DFB207DACF800557EF3 /* main.m */; };
+		4CD25E05207DEB7D00557EF3 /* BaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD25E04207DEB7D00557EF3 /* BaseRequest.m */; };
+		4CD25E08207DEBB100557EF3 /* ServerResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD25E07207DEBB100557EF3 /* ServerResponse.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C3157552084389600B913AC /* ServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceProtocol.h; sourceTree = "<group>"; };
+		4C315756208445BE00B913AC /* NetworkingDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkingDefines.h; sourceTree = "<group>"; };
+		4C315757208445E500B913AC /* APIBaseManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIBaseManager.h; sourceTree = "<group>"; };
+		4C315758208445E500B913AC /* APIBaseManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIBaseManager.m; sourceTree = "<group>"; };
 		4CD25DE6207DACF600557EF3 /* UrbanDict.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UrbanDict.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD25DE9207DACF600557EF3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4CD25DEA207DACF700557EF3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,6 +36,10 @@
 		4CD25DF8207DACF800557EF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4CD25DFA207DACF800557EF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CD25DFB207DACF800557EF3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4CD25E03207DEB7D00557EF3 /* BaseRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseRequest.h; sourceTree = "<group>"; };
+		4CD25E04207DEB7D00557EF3 /* BaseRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseRequest.m; sourceTree = "<group>"; };
+		4CD25E06207DEBB100557EF3 /* ServerResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerResponse.h; sourceTree = "<group>"; };
+		4CD25E07207DEBB100557EF3 /* ServerResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServerResponse.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,11 +78,19 @@
 				4CD25DED207DACF700557EF3 /* FirstViewController.m */,
 				4CD25DEF207DACF700557EF3 /* SecondViewController.h */,
 				4CD25DF0207DACF700557EF3 /* SecondViewController.m */,
+				4CD25E03207DEB7D00557EF3 /* BaseRequest.h */,
+				4CD25E04207DEB7D00557EF3 /* BaseRequest.m */,
+				4CD25E06207DEBB100557EF3 /* ServerResponse.h */,
+				4CD25E07207DEBB100557EF3 /* ServerResponse.m */,
 				4CD25DF2207DACF700557EF3 /* Main.storyboard */,
 				4CD25DF5207DACF800557EF3 /* Assets.xcassets */,
 				4CD25DF7207DACF800557EF3 /* LaunchScreen.storyboard */,
 				4CD25DFA207DACF800557EF3 /* Info.plist */,
 				4CD25DFB207DACF800557EF3 /* main.m */,
+				4C3157552084389600B913AC /* ServiceProtocol.h */,
+				4C315756208445BE00B913AC /* NetworkingDefines.h */,
+				4C315757208445E500B913AC /* APIBaseManager.h */,
+				4C315758208445E500B913AC /* APIBaseManager.m */,
 			);
 			path = UrbanDict;
 			sourceTree = "<group>";
@@ -148,8 +167,11 @@
 			files = (
 				4CD25DF1207DACF700557EF3 /* SecondViewController.m in Sources */,
 				4CD25DEB207DACF700557EF3 /* AppDelegate.m in Sources */,
+				4CD25E05207DEB7D00557EF3 /* BaseRequest.m in Sources */,
+				4C315759208445E500B913AC /* APIBaseManager.m in Sources */,
 				4CD25DFC207DACF800557EF3 /* main.m in Sources */,
 				4CD25DEE207DACF700557EF3 /* FirstViewController.m in Sources */,
+				4CD25E08207DEBB100557EF3 /* ServerResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
