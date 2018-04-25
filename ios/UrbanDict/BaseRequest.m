@@ -19,7 +19,7 @@
 }
 
 - (NSString *)requestURL {
-    
+    return @"";
 }
 
 @end

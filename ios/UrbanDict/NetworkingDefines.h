@@ -32,7 +32,7 @@ typedef NS_ENUM (NSUInteger, APIManagerErrorType) {
     APIManagerErrorNeedLogin,
 };
 
-typedef NS_ENUM (NSUInterger, APIManagerCachePolicy) {
+typedef NS_ENUM (NSUInteger, APIManagerCachePolicy) {
     APIManagerCachePolicyNoCache = 0,
     APIManagerCachePolicyMemory = 1 << 0,
     APIManagerCahcePolicyDisk = 1 << 1,

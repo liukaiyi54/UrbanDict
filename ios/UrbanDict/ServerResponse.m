@@ -7,7 +7,7 @@
 //
 
 #import "ServerResponse.h"
-#import "ServerAPIConstants.h"
+#import "NetworkingDefines.h"
 
 @implementation ServerResponse
 
@@ -26,7 +26,7 @@
 }
 
 - (BOOL)success {
-    return _code == kServerAPICodeSuccess;
+    return _code == 1;
 }
 
 @end
